@@ -1,27 +1,84 @@
 # 🎙️ Voice-Enabled Business Intelligence System
 
-A Python-based **Voice-Driven Business Intelligence system** that allows users to speak natural language queries and instantly receive analytical insights, visualizations, and Power BI–ready outputs.
+This project demonstrates a **Voice-Enabled Business Intelligence (BI) system** built using Python and Power BI.  
+Users can interact with business data using **natural language voice commands**, and the system automatically generates analytical insights and dashboards.
 
 ---
 
-## 🚀 Features
-- 🎤 Voice input using SpeechRecognition
-- 🧠 Rule-based NLP intent detection
-- 📊 Automated data analysis with pandas
-- 📈 Dynamic visualizations using matplotlib & seaborn
-- 🔁 CSV output for Power BI live refresh
-- 🧩 Modular & scalable architecture
+## 🔄 Project Flow
+Voice Command → NLP Intent Parsing → Python Analysis → CSV Output → Power BI Dashboard
 
 ---
 
-## 🛠 Tech Stack
+## 📁 Repository Structure
+
+
+voice-enabled-business-intelligence/
+├── run_voice_bi.py          # Main entry point
+├── src/                     # Core Python logic
+│   ├── voice_input.py
+│   ├── command_parser.py
+│   ├── analysis.py
+│   └── utils.py
+├── data/                    # Raw dataset
+│   └── Sales_2014.csv
+├── output/                  # Python-generated output
+│   └── voice_output.csv
+├── notebooks/               # Exploration notebooks
+│   └── voice_bi_exploration.ipynb
+├── powerbi/                 # Power BI assets
+│   ├── voice_bi_dashboard.pbix
+│   └── screenshots/
+
+---
+
+## 🧠 What This Project Shows
+
+- Voice-based interaction with business data
+- Rule-based NLP intent detection
+- Automated data aggregation and visualization
+- Integration between Python analytics and Power BI dashboards
+- Clean separation between development (notebooks) and production code
+
+---
+
+## 🛠 Technologies Used
+
 - Python
 - pandas, matplotlib, seaborn
-- SpeechRecognition & PyAudio
+- SpeechRecognition, PyAudio
 - Rule-Based NLP
 - Power BI
 
 ---
 
-## 📂 Project Architecture
+## ▶️ How This Repository Is Used
+
+- Python scripts generate analytical results and export them as CSV files
+- Power BI consumes the exported CSV for interactive dashboards
+- Jupyter notebooks are used only for exploration and experimentation
+
+> Note: Environment setup steps are standard and intentionally omitted to keep the repository focused on structure and implementation.
+
+---
+## 📸 Power BI Dashboard Screenshots
+![Dashboard Overview](powerbi/screenshots/dashboard_overview.png)
+![Sales by Person](powerbi/screenshots/sales_by_person.png)
+
+---
+Run `python run_voice_bi.py` from the project root to start the voice-driven analysis.
+---
+
+## 🎯 Project Category
+
+- Business Intelligence Automation
+- Voice Interface Application
+- Rule-Based NLP System
+
+---
+
+## 👤 Author
+
+**Ajmul Haq**  
+Data Analyst (Python | Power BI)
 
