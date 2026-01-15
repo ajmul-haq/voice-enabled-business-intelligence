@@ -1,84 +1,181 @@
-# 🎙️ Voice-Enabled Business Intelligence System
-
-This project demonstrates a **Voice-Enabled Business Intelligence (BI) system** built using Python and Power BI.  
-Users can interact with business data using **natural language voice commands**, and the system automatically generates analytical insights and dashboards.
+# 🎙️ Voice-Driven Business Intelligence Dashboard  
+### Python • NLP • Power BI
 
 ---
 
-## 🔄 Project Flow
-Voice Command → NLP Intent Parsing → Python Analysis → CSV Output → Power BI Dashboard
+## 📌 Project Overview
+
+This project demonstrates a **Voice / Text-Driven Business Intelligence (BI) system** where business questions are interpreted using **Natural Language Processing (NLP)** in Python and transformed into **decision-ready analytics** visualized in **Power BI**.
+
+Instead of manually exploring dashboards, users can ask **natural language questions** (voice or text), and the system generates the relevant analytical output for Power BI to visualize.
+
+---
+
+## 🎯 Business Problem
+
+Business stakeholders often struggle to:
+
+- Ask ad-hoc analytical questions without technical skills  
+- Quickly identify product, region, or salesperson performance  
+- Translate raw data into **actionable decisions**
+
+Traditional dashboards are static and require manual filtering.
+
+---
+
+## 💡 Solution
+
+This project solves the problem by:
+
+- Using **NLP** to understand business questions  
+- Running **Python-based analytics** on sales data  
+- Exporting structured results to **Power BI**  
+- Allowing decision-makers to explore insights visually  
+
+---
+
+## 🔄 Project Workflow
+
+
+
+---
+
+## 📊 Dataset Description
+
+The dataset represents sales transactions with the following columns:
+
+| Column Name   | Description |
+|--------------|-------------|
+| Date         | Sales transaction date |
+| Region       | Sales region (East, West, North, South) |
+| Product      | Product name |
+| Salesperson  | Sales representative |
+| Units_Sold   | Quantity sold |
+| Unit_Price   | Price per unit |
+| Category     | Product category |
+| Revenue      | Total sales revenue |
+| Cost         | Total cost |
+| Profit       | Revenue − Cost |
+
+---
+
+## 🧹 Data Cleaning & Preparation
+
+Key preprocessing steps include:
+
+- Handling missing values  
+- Standardizing text (lowercasing, trimming spaces)  
+- Fixing spelling inconsistencies (e.g., `moblie → Mobile`)  
+- Ensuring consistent schema for Power BI refresh  
+
+---
+
+## 🧠 NLP & Voice Command Layer
+
+The system uses **rule-based NLP intent detection** to map user queries to analytics.
+
+### Example Voice / Text Commands
+
+- *"Show revenue by salesperson"*  
+- *"Product wise sales"*  
+- *"Region wise revenue"*  
+- *"Monthly revenue trend"*  
+
+Each command triggers a specific analysis function in Python.
+
+---
+
+## 📈 Power BI Dashboard
+
+### Key Visuals Included
+
+- **KPI Cards**
+  - Total Revenue  
+  - Total Profit  
+  - Total Cost  
+  - Total Units Sold  
+
+- **Revenue Trend by Month**
+- **Revenue by Region**
+- **Revenue by Salesperson**
+- **Revenue by Product**
+- **Product Sales by Region (Matrix)**
+- **Month-wise Sales by Product**
+- **Top Products by Revenue**
+
+The dashboard remains **generic**, while Python dynamically controls **what data is analyzed**.
+
+---
+
+## 🧠 Key Business Insights
+
+- **Electronics category** contributes over half of total revenue  
+- **Tablet** is the top-performing product across regions  
+- **West region** generates the highest revenue  
+- Sales performance varies significantly among salespersons  
+- Revenue shows **seasonal fluctuations**, with mid-year peaks  
+
+---
+
+## 📌 Business Decisions Enabled
+
+Based on insights, the business should:
+
+- Prioritize **Tablet and Electronics** inventory and promotions  
+- Strengthen operations in the **West region**  
+- Improve sales strategies in underperforming regions  
+- Reward and replicate strategies of top salespersons  
+- Optimize costs to improve overall profit margin  
+
+---
+
+## 🛠️ Tech Stack
+
+- **Python**
+  - pandas, numpy  
+  - matplotlib, seaborn  
+  - SpeechRecognition  
+
+- **NLP**
+  - Rule-based intent parsing  
+
+- **Power BI**
+  - Interactive dashboards  
+  - KPI monitoring  
 
 ---
 
 ## 📁 Repository Structure
 
-
-voice-enabled-business-intelligence/
-├── run_voice_bi.py          # Main entry point
-├── src/                     # Core Python logic
-│   ├── voice_input.py
-│   ├── command_parser.py
-│   ├── analysis.py
-│   └── utils.py
-├── data/                    # Raw dataset
-│   └── Sales_2014.csv
-├── output/                  # Python-generated output
-│   └── voice_output.csv
-├── notebooks/               # Exploration notebooks
-│   └── voice_bi_exploration.ipynb
-├── powerbi/                 # Power BI assets
-│   ├── voice_bi_dashboard.pbix
-│   └── screenshots/
-
----
-
-## 🧠 What This Project Shows
-
-- Voice-based interaction with business data
-- Rule-based NLP intent detection
-- Automated data aggregation and visualization
-- Integration between Python analytics and Power BI dashboards
-- Clean separation between development (notebooks) and production code
+voice-nlp-powerbi/
+│
+├── data/
+│ ├── raw/
+│ └── processed/
+│
+├── nlp/
+│ ├── intent_keywords.py
+│ └── parser.py
+│
+├── analysis/
+│ ├── product_analysis.py
+│ ├── region_analysis.py
+│ └── salesperson_analysis.py
+│
+├── voice/
+│ └── speech_input.py
+│
+├── powerbi/
+│ └── sales_dashboard.pbix
+│
+├── main.py
+├── requirements.txt
+└── README.md
 
 ---
 
-## 🛠 Technologies Used
+## 🚀 How to Run the Project
 
-- Python
-- pandas, matplotlib, seaborn
-- SpeechRecognition, PyAudio
-- Rule-Based NLP
-- Power BI
-
----
-
-## ▶️ How This Repository Is Used
-
-- Python scripts generate analytical results and export them as CSV files
-- Power BI consumes the exported CSV for interactive dashboards
-- Jupyter notebooks are used only for exploration and experimentation
-
-> Note: Environment setup steps are standard and intentionally omitted to keep the repository focused on structure and implementation.
-
----
-## 📸 Power BI Dashboard Screenshots
-![Dashboard Overview](powerbi/screenshots/dashboard_overview.png)
-![Sales by Person](powerbi/screenshots/sales_by_person.png)
-
----
-Run `python run_voice_bi.py` from the project root to start the voice-driven analysis.
----
-
-## 🎯 Project Category
-
-- Business Intelligence Automation
-- Voice Interface Application
-- Rule-Based NLP System
-
----
-
-## 👤 Author
-
-**Ajmul Haq**  
-Data Analyst (Python | Power BI)
-
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/voice-nlp-powerbi.git
