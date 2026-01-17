@@ -8,7 +8,7 @@
 This project demonstrates a **Voice / Text-Driven Business Intelligence (BI) system** where business questions are interpreted using **Natural Language Processing (NLP)** in Python and transformed into **decision-ready analytics** visualized in **Power BI**.
 
 Instead of manually exploring dashboards, users can ask **natural language questions** (voice or text), and the system generates the relevant analytical output for Power BI to visualize.
-![Power BI Dashboard]()
+![Power BI Dashboard](https://github.com/ajmul-haq/voice-enabled-business-intelligence/blob/main/Demo/Screenshot%202026-01-16%20013426.png?raw=true)
 
 ---
 
